@@ -1,0 +1,1 @@
+Directory="./src/components";if [ ! -d "$Directory" ];then mkdir ./src/components; cd ./src/components || exit; touch Component.svelte || exit; fi; if [ -d "$Directory" ];then cd ./src/components || exit;touch Component.svelte || exit;fi

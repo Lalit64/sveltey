@@ -1,0 +1,57 @@
+{
+  "name": "@lalit64/sveltey",
+  "description": "Svletey: Cli for Svlete-Kit",
+  "version": "1.0.7",
+  "author": "lalit64",
+  "bin": {
+    "svl": "./bin/run"
+  },
+  "bugs": "https://github.com/Lalit64/sveltey/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "chalk": "^4.1.2",
+    "exec-sh": "^0.4.0",
+    "shelljs": "^0.8.4",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/node": "^10",
+    "globby": "^10",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/Lalit64/sveltey",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "svl",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Lalit64/sveltey",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "svl": "./bin/run"
+  },
+  "types": "lib/index.d.ts"
+}
